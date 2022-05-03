@@ -17,7 +17,8 @@ use App\Http\Controllers\RegisterController;
 Route::get('/', function () {
     return view('inicio');
 });
-Route::get('/auth',[RegisterController::class,'index']);
+Route::get('/registar',[RegisterController::class,'index'])->name('registar');
+Route::post('/registar',[RegisterController::class,'store']);
 // Route::get('/auth','RegisterController@index')->name('auth.index');
 
 

@@ -1,11 +1,11 @@
 @extends('/layouts.app')
 @section('titulo')
-    Muro {{ $user->usuario }}
+    Perfil {{ $user->usuario }}
 @endsection
 @section('contenido')
     <div class="flex justify-center">
-        <div class="w-full md:w-8/12 lg:w-6/12 md:flex">
-            <div class="md:w-8/12 lg:w-6/12 px-5">
+        <div class="w-full md:w-8/12 lg:w-6/12 flex flex-col items-center md:flex-row">
+            <div class="w-8/12 lg:w-6/12 px-5 ">
                 {{-- <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 h-full w-full" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
                   </svg> --}}
@@ -16,8 +16,21 @@
                       </svg>
                   </div>
             </div>
-            <div class="md:w-8/12 lg:w-6/12 text-center px-5 text-gray-500 text-3xl">
-                {{ $user->usuario }}
+            <div class="md:w-8/12 lg:w-6/12 px-5 flex flex-col items-center py-10 md:justify-center md:py-10 md:items-start">
+               <p class="text-gray-700 text-2xl"> {{ $user->usuario }}</p>
+
+               <p class="text-gray-800 text-sm mt-2 mb-3 font-bold">
+                   0
+                   <span class="font-normal"> Seguidores</span>
+               </p>
+               <p class="text-gray-800 text-sm mb-3 font-bold">
+                   0
+                   <span class="font-normal"> Siguiendo</span>
+               </p>
+               <p class="text-gray-800 text-sm mb-3 font-bold">
+                   0
+                   <span class="font-normal"> Posts</span>
+               </p>
             </div>
         </div>
     </div>

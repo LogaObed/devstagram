@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
@@ -27,7 +28,9 @@ Route::post('/registar',[RegisterController::class,'store']);
 // Route::get('/login', 'LoginController@index')->name('login');
 Route::get('/login',[LoginController::class,'index'])->name('login');
 Route::post('/login',[LoginController::class,'store']);
+// cerrer seison
+Route::post('/logout', [LogoutController::class,'store'])->name('logout');
 // post controller
-Route::get('/muro',[PostController::class, 'index'])->name('post.index');
+Route::get('/{user:usuario}',[PostController::class, 'index'])->name('post.index');
 
 

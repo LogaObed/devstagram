@@ -1,6 +1,6 @@
 @extends('/layouts.app')
 @section('titulo')
-    Muro {{ auth()->user()->name }}
+    Muro {{ $user->usuario }}
 @endsection
 @section('contenido')
     <div class="flex justify-center">
@@ -16,8 +16,8 @@
                       </svg>
                   </div>
             </div>
-            <div class="md:w-8/12 lg:w-6/12 px-5 text-gray-500 text-3xl">
-                {{ auth()->user()->usuario }}
+            <div class="md:w-8/12 lg:w-6/12 text-center px-5 text-gray-500 text-3xl">
+                {{ $user->usuario }}
             </div>
         </div>
     </div>

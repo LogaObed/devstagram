@@ -37,6 +37,9 @@
                         </p>
                     @enderror
                 </div>
+                <div class="mb-5">
+                    <input type="checkbox" name="remember" ><label for="" class="mb-2 capitalize text-gray-500 font-bold">mantener mi sesión abierta</label>
+                </div>
                 @if (session('mensaje'))
                     <p class="bg-red-500 text-white my-2 rounded-sm text-sm p-2 text-center normal-case">
                         {{ session('mensaje') }}</p>

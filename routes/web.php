@@ -32,5 +32,6 @@ Route::post('/login',[LoginController::class,'store']);
 Route::post('/logout', [LogoutController::class,'store'])->name('logout');
 // post controller
 Route::get('/{user:usuario}',[PostController::class, 'index'])->name('post.index');
+Route::get('/posts/create',[PostController::class, 'create'])->name('posts.create');
 
 

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon"
-        href="https://user-images.githubusercontent.com/1915268/67272248-d3342000-f4d9-11e9-86ba-6933108766e0.png">
-    <title>@yield('titulo')</title>
+    {{-- <link rel="icon" href="https://user-images.githubusercontent.com/1915268/67272248-d3342000-f4d9-11e9-86ba-6933108766e0.png"> --}}
+    @stack('styles')
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <title>@yield('titulo')</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
